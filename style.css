@@ -26,7 +26,7 @@ button {
 .wrapper {
     display: flex;
     margin: 0 auto;
-    background-color: aqua;
+    background-color:#EAE8FE;
     width: 748px;
 }
 
@@ -40,7 +40,7 @@ button {
 .box-2 {
     margin-left: auto;
     width: 360px;
-    background-color: rebeccapurple;
+    background-color: #EAE8FE;
 }
 
 .select-cola {
@@ -106,7 +106,7 @@ button {
 }
 
 .sell-container div {
-    min-width: 200px;
+    /* min-width: 200px; */
     flex-basis: 200px;
     border-radius: 5px;
 }
@@ -191,27 +191,68 @@ button {
 }
 
 .sell-container .order-list-item {
+    padding: 6px 10px 7px 10px;
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
+    /* justify-content: ; */
+    align-items: center;
     margin-bottom: 6px;
     background-color: #ffffff;
     width: 170px;
-}
-
-.sell-container .order-list-item img {
-    width: 18px;
-}
-
-.sell-container .order-list-item strong {
     color: #333333;
     font-size: 9px;
     font-weight: 500;
     line-height: 13px;
 }
 
-
-.sell-container .order-list-item .count-box {
-    float: left;
+.sell-container .order-list-item img {
+    margin-right: 10px;
+    width: 18px;
 }
 
+.sell-container .order-list-item .count-box{
+    display: inline-block;
+    margin-left: 21px;
+    margin: 8px;
+    width: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    margin-right: auto;
+    color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    flex-basis: auto;
+    margin-left: auto;
+}
+
+
+.sell-container .order-list-item .count-box {
+    /* float: left; */
+    
+}
+
+
+
+.Possessed-money-box {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 9px 27px;
+}
+
+.Possessed-money {
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 306px;
+    background-color: #EAE8FE;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 5px;
+}
+
+
+
+.get-drink-wrap {
+    background-color: #ffffff;
+}
