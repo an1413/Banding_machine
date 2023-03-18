@@ -40,6 +40,7 @@ button {
 }
 
 .select-cola {
+    margin-bottom: 20px;
     display: grid;
     gap: 12px;
     grid-template-columns: repeat(3, 1fr);
@@ -88,6 +89,22 @@ button {
     color: #ffffff;
 }
 
+
+.sell-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+}
+
+.sell-container div {
+    min-width: 200px;
+    flex-basis: 200px;
+}
+
+.sell-container button {
+    width: 94px;
+}
 
 
 
