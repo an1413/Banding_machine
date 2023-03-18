@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+}
+
 body {
     background-color: #EAE8FE;
 }
@@ -104,16 +108,110 @@ button {
 .sell-container div {
     min-width: 200px;
     flex-basis: 200px;
+    border-radius: 5px;
 }
 
 .sell-container button {
     width: 94px;
 }
 
+.sell-container .balance-wrap {
+    background-color: #EAE8FE;
+    color: #000000;
+}
+
+.sell-container .balance {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.sell-container .change-button {
+    background-color: #ffffff;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 500;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+}
+
+.sell-container .deposit-amount-wrap {
+    padding-top: 6px;
+    padding-bottom: 7px;
+    padding-left: 6px;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #BDBDBD;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+}
 
 
 
+.sell-container .deposit-button {
+    background-color: #ffffff;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 500;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+}
+
+.sell-container .order-list-wrap {
+    height: 106px;
+    background-color: #EAE8FE;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* .sell-container .order-list-wrap::-webkit-scrollbar {
+    height: 10px;
+} */
+
+.sell-container .get-button {
+    height: 106px;
+    background-color: #6327FE;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.sell-container .order-list {
+    padding: 12px;
+    /* width: 170px; */
+    /* display: flex; */
+}
+
+.sell-container .order-list-item {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    width: 170px;
+}
+
+.sell-container .order-list-item img {
+    width: 18px;
+}
+
+.sell-container .order-list-item strong {
+    color: #333333;
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 13px;
+}
 
 
-
+.sell-container .order-list-item .count-box {
+    float: left;
+}
 
