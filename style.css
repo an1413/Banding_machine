@@ -165,8 +165,7 @@ button {
 .sell-container .order-list-wrap {
     height: 106px;
     background-color: #EAE8FE;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: auto;
 }
 
 /* .sell-container .order-list-wrap::-webkit-scrollbar {
@@ -193,7 +192,7 @@ button {
 .sell-container .order-list-item {
     padding: 6px 10px 7px 10px;
     display: flex;
-    /* justify-content: ; */
+    vertical-align: top;
     align-items: center;
     margin-bottom: 6px;
     background-color: #ffffff;
@@ -204,25 +203,27 @@ button {
     line-height: 13px;
 }
 
+.sell-container .order-list-item .img-box {
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+}
+
 .sell-container .order-list-item img {
     margin-right: 10px;
     width: 18px;
 }
 
 .sell-container .order-list-item .count-box{
-    display: inline-block;
-    margin-left: 21px;
-    margin: 8px;
     width: 30px;
     border: 1px solid #BDBDBD;
     border-radius: 5px;
-    margin-right: auto;
     color: #333333;
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
     flex-basis: auto;
-    margin-left: auto;
+    text-align: center;
 }
 
 
@@ -254,5 +255,64 @@ button {
 
 
 .get-drink-wrap {
+    padding: 25px 27px 26px;
     background-color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    height: 474px;
 }
+
+.get-drink-wrap h2 {
+    margin-bottom: 13px;
+}
+
+.get-drink-wrap .get-box {
+    margin: 0 auto;
+    padding: 12px;
+    width: 306px;
+    height: 364px;
+    background-color: #EAE8FE;
+    overflow: auto;
+}
+
+.get-drink-item li button{
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    /* justify-content: space-between; */
+    min-width: 276px;
+    width: 276px;
+    height: 46px;
+    padding: 6px 8px 7px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    color: #333333;
+}
+
+.get-drink-item li button img {
+    margin-right: 10px;
+    width: 18px;
+}
+
+
+.get-drink-item li button img, span {
+    float: left;
+}
+
+.get-drink-item li button .count-box{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    float: right;
+    /* flex-basis: auto; */
+    /* text-align: center; */
+}
+
