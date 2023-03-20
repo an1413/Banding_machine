@@ -19,42 +19,45 @@
 
     <img class="cola-banner" src="./images/콜라_Group.png" alt="콜라배너">
 
-    <div class="wrapper">
-        
-        <div class="box-1">
-            <li class="select-cola">
-                <ul class="check">
+    <main class="wrapper">
+
+        <section class="box-1">
+            <div class="select-cola">
+                <button class="select-list check">
                     <img src="./images/콜라_red.png" alt="Original_Cola">
                     <h2>Original_Cola</h2>
-                    <button class="sell-box"><strong>1000원</strong></button>
-                </ul>
-                <ul class="sold-out">
+                    <span class="sell-box">1000원</span>
+                </button>
+                <button class="select-list sold-out disabled">
                     <img src="./images/콜라_violet.png" alt="violet_Cola">
-                    <h2>violet_Cola</h2>
-                    <button class="sell-box"><strong>1000원</strong></button>
-                </ul>
-                <ul>
+                    <h2>Violet_Cola</h2>
+                    <span class="sell-box">1000원</span>
+                    <!-- <div class="sold-out-panner">품절</div> -->
+                    
+                </button>
+                <button class="select-list">
                     <img src="./images/콜라_yellow.png" alt="yellow_Cola">
-                    <h2>yellow_Cola</h2>
-                    <button class="sell-box"><strong>1000원</strong></button>
-                </ul>
-                <ul>
-                    <img src="./images/콜라_cool.png" alt="cool_Cola">
-                    <h2>cool_Cola</h2>
-                    <button class="sell-box"><strong>1000원</strong></button>
-                </ul>
-                <ul class="check">
-                    <img src="./images/콜라_green.png" alt="green_Cola">
-                    <h2>green_Cola</h2>
-                    <button class="sell-box"><strong>1000원</strong></button>
-                </ul>
-                <ul>
+                    <h2>Yellow_Cola</h2>
+                    <span class="sell-box">1000원</span>
+                </button>
+                <button class="select-list">
+                    <img src="./images/콜라_cool.png" alt="Cool_Cola">
+                    <h2>Cool_Cola</h2>
+                    <span class="sell-box">1000원</span>
+                </button>
+                <button class="select-list check">
+                    <img src="./images/콜라_green.png" alt="Green_Cola">
+                    <h2>Green_Cola</h2>
+                    <span class="sell-box">1000원</span>
+                </button>
+                <button class="select-list">
                     <img src="./images/콜라_orange.png" alt="orange_Cola">
-                    <h2>orange_Cola</h2>
-                    <button class="sell-box"><strong>1000원</strong></button>
-                </ul>
+                    <h2>Orange_Cola</h2>
+                    <span class="sell-box">1000원</span>
+                </button>
+                
 
-            </li>
+            </div>
 
             <div class="sell-container">
                 <div class="balance-wrap">
@@ -66,34 +69,37 @@
                 <button class="change-button">거스름돈 반환</button>
                 <div class="deposit-amount-wrap"><span>입금액 입력</span></div>
                 <button class="deposit-button">입금</button>
+                
                 <div class="order-list-wrap">
-                    <div class="order-list">
-                        <div class="order-list-item">
+                    <ul class="order-list">
+                        <li class="order-list-item">
                             <div class="img-box">
-                                <img src="./images/콜라_red.png" alt=""><div>Original_Cola</div>
+                                <img src="./images/콜라_red.png" alt="">
+                                <p>Original_Cola</p>
                             </div>
-                            <span class="count-box">1</span>
+                            <div class="count-box">1</div>
                             <!-- <div class="img-box"><img src="images/콜라_red.png" alt="red_Cola"> <strong>Original_Cola</strong></div>
                             <div class="count-box">1</div> -->
-                        </div>
-                        <div class="order-list-item">
+                        </li>
+                        <li class="order-list-item">
                             <div class="img-box">
                                 <img src="./images/콜라_green.png" alt=""><div>Green_Cola</div>
                             </div>
-                            <span class="count-box">2</span>
+                            <div class="count-box">2</div>
                             <!-- <div class="order-menu">
                                 <img src="images/콜라_red.png" alt="red_Cola">
                                 <strong>Original_Cola</strong>
                             </div>
                             <div class="count-box">1</div> -->
-                        </div>
-                    </div>
+                        </li>
+
+                    </ul>
                 </div>
                 <button class="get-button">획득</button>
             </div>
 
 
-        </div>
+        </section>
         <div class="box-2">
             <div class="Possessed-money-box">
                 <div class="Possessed-money">
@@ -107,39 +113,46 @@
                         <ul class="get-drink-item">
                             <li>
                                 <button type="button">
-                                    <img src="./images/콜라_red.png" alt="red_Cola">
-                                    <span>Green_Cola</span>
+                                    <div class="img-box">
+                                        <img src="./images/콜라_red.png" alt="red_Cola">
+                                        <div>Original_Cola</div>
+                                    </div>
                                     <span class="count-box">1</span>
                                 </button>
                             </li>
                             <li>
                                 <button type="button">
-                                    <img src="./images/콜라_green.png" alt="green_Cola">
-                                    <span>Green_Cola</span>
+                                    <div class="img-box">
+                                        <img src="./images/콜라_green.png" alt="green_Cola">
+                                        <div>Green_Cola</div>
+                                    </div>
                                     <span class="count-box">2</span>
                                 </button>
                             </li>
                             <li>
                                 <button type="button">
-                                    <img src="./images/콜라_orange.png" alt="orange_Cola">
-                                    <span>Green_Cola</span>
+                                    <div class="img-box">
+                                        <img src="./images/콜라_orange.png" alt="orange_Cola">
+                                        <div>Orange_Cola</div>
+                                    </div>
                                     <span class="count-box">1</span>
                                 </button>
                             </li>
                             <li>
                                 <button type="button">
-                                    <img src="./images/콜라_violet.png" alt="violet_Cola">
-                                    <span>Green_Cola</span>
-                                    <span class="count-box">5</span>
+                                    <div class="img-box">
+                                        <img src="./images/콜라_violet.png" alt="violet_Cola">
+                                        <div>Violet_Cola</div>
+                                    </div>
+                                    <div class="count-box">5</div>
                                 </button>
                             </li>
                         </ul>
-                    </div>
-                    <span>총금액 : </span>
-                    <span>9,000 원</span>
+                </div>
+                <span class="total-price">총금액 : 9,000 원</span>    
             </div>
         </div>
-    </div>
+    </main>
 
 </body>
 </html>

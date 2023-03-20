@@ -10,6 +10,8 @@ li {
 
 body {
     background-color: #EAE8FE;
+    overflow-y: overlay;
+    scrollbar-width: thin;
 }
 
 button {
@@ -21,6 +23,36 @@ button {
     display: block;
     width: 436px;
     margin: 0 auto 43px;
+}
+
+.sold-out {
+    position: relative;
+    overflow: hidden;
+}
+
+.soldout::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8) url(./images/품절.png) no-repeat center / 7rem;
+}
+
+.sold-out-panner {
+    width: 57.51px;
+    height: 44.85px;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #EAE8FE;
+    position: absolute;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 21px;
+    border: 2px solid #EAE8FE;
+    transform: rotate(-17.97deg);
 }
 
 .wrapper {
@@ -56,11 +88,82 @@ button {
     padding-top: 11px;
     padding-bottom: 9px;
     width: 94px;
+    height: 130px;
     border: 2px solid #B5B5B6;
     border-radius: 10px;
-
+    /* filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5)); */
     /* box-shadow 부분 체크하기!! 제대로 안됌.. */
-    box-shadow: (0px 0px 4px rgba(0, 0, 0, 0.5));
+    /* box-shadow: (0px 0px 4px rgba(0, 0, 0, 0.5)); */
+}
+
+.select-cola button {
+    padding-top: 11px;
+    padding-bottom: 9px;
+    width: 94px;
+    height: 130px;
+    border: 2px solid #B5B5B6;
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    /* box-shadow 부분 체크하기!! 제대로 안됌.. */
+    /* box-shadow: (0px 0px 4px rgba(0, 0, 0, 0.5)); */
+    z-index: 2;
+}
+
+.select-cola .select-list {
+    background-color: #fff;
+}
+
+
+.sold-out {
+    display: block;
+    width: 94px;
+    height: 130px;
+    background-color: #000;
+}
+
+.sold-out::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 0px;  background: no-repeat center/ 60px 46px url(./images/품절.png) rgba(0, 0, 0, 0.8);
+}
+
+  
+.sold-out::after {
+    content: '품절';
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
+  }
+
+
+.select-cola button h2 {
+    margin-bottom: 7px;
+    font-size: 9px;
+    line-height: 13.03px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.select-cola .select-list .sell-box {
+    display: flex;
+    margin: 0 auto;
+    width: 70px;
+    height: 22px;   
+    background-color: #6327FE;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -83,6 +186,7 @@ button {
 }
 
 .select-cola ul .sell-box {
+
     margin: 0 auto;
     width: 70px;
     /* height 부분 마음에 안드네.. height를 꼭 써야할까 으음.. 아니면 대체할 방법 없을까 .. padding으로 처리 가능할 것 같은데 찾아보자 */
@@ -162,15 +266,59 @@ button {
     border-radius: 5px;
 }
 
-.sell-container .order-list-wrap {
+.sell-container .order-list {
+    display: inline-block;
+    width: 200px;
     height: 106px;
+    padding: 4px;
     background-color: #EAE8FE;
-    overflow: auto;
+    padding-right: 4px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
 }
 
-/* .sell-container .order-list-wrap::-webkit-scrollbar {
-    height: 10px;
-} */
+/* scroll */
+.order-list::-webkit-scrollbar,
+.get-box::-webkit-scrollbar
+{
+    width: 5px;
+
+}
+.order-list::-webkit-scrollbar-thumb,
+.get-box::-webkit-scrollbar-thumb
+{
+    background-color:#fff;
+    border: 2px solid #EAE8FE;
+    border-radius: 50px;
+}
+.order-list::-webkit-scrollbar-track,
+.get-box::-webkit-scrollbar-track 
+{
+    background-color: #EAE8FE;
+    border-radius: 10px;
+
+}
+
+.order-list::-webkit-scrollbar-button:vertical:start:decrement,
+.order-list::-webkit-scrollbar-button:vertical:start:increment {
+    display: block;
+    height: 4px;
+}
+/* 오른쪽 스크롤바 따로 */
+
+
+.get-box::-webkit-scrollbar-track {
+    min-height: 300px;
+    /* border: 5px solid #bdbdbd 0 0 10px 0; */
+}
+
+.get-box::-webkit-scrollbar-button:vertical:start:decrement,
+.get-box::-webkit-scrollbar-button:vertical:start:increment {
+    display: block;
+    height: 3px;
+}
 
 .sell-container .get-button {
     height: 106px;
@@ -185,15 +333,13 @@ button {
 
 .sell-container .order-list {
     padding: 12px;
-    /* width: 170px; */
-    /* display: flex; */
 }
 
 .sell-container .order-list-item {
     padding: 6px 10px 7px 10px;
     display: flex;
-    vertical-align: top;
-    align-items: center;
+    /* vertical-align: top; */
+    /* align-items: center; */
     margin-bottom: 6px;
     background-color: #ffffff;
     width: 170px;
@@ -201,12 +347,13 @@ button {
     font-size: 9px;
     font-weight: 500;
     line-height: 13px;
+    border-radius: 5px;
 }
 
 .sell-container .order-list-item .img-box {
     display: flex;
     align-items: center;
-    margin: auto 0;
+    /* margin: auto 0; */
 }
 
 .sell-container .order-list-item img {
@@ -215,7 +362,12 @@ button {
 }
 
 .sell-container .order-list-item .count-box{
-    width: 30px;
+    /* margin: 8px 8px 8px auto; */
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #BDBDBD;
     border-radius: 5px;
     color: #333333;
@@ -225,13 +377,6 @@ button {
     flex-basis: auto;
     text-align: center;
 }
-
-
-.sell-container .order-list-item .count-box {
-    /* float: left; */
-    
-}
-
 
 
 .Possessed-money-box {
@@ -262,6 +407,7 @@ button {
     font-size: 14px;
     line-height: 20px;
     height: 474px;
+
 }
 
 .get-drink-wrap h2 {
@@ -269,18 +415,26 @@ button {
 }
 
 .get-drink-wrap .get-box {
+    overflow-y: auto;
     margin: 0 auto;
     padding: 12px;
     width: 306px;
     height: 364px;
     background-color: #EAE8FE;
-    overflow: auto;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+}
+
+.get-drink-item {
+    min-height: 500px;
 }
 
 .get-drink-item li button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 6px;
     background-color: #ffffff;
-    /* justify-content: space-between; */
     min-width: 276px;
     width: 276px;
     height: 46px;
@@ -292,17 +446,20 @@ button {
     color: #333333;
 }
 
+.get-drink-item li button .img-box {
+    display: flex;
+    align-items: center;
+}
+
 .get-drink-item li button img {
     margin-right: 10px;
     width: 18px;
 }
 
-
-.get-drink-item li button img, span {
-    float: left;
-}
-
 .get-drink-item li button .count-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 30px;
     border: 1px solid #BDBDBD;
@@ -311,8 +468,39 @@ button {
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
-    float: right;
-    /* flex-basis: auto; */
-    /* text-align: center; */
 }
 
+.get-drink-wrap .total-price {
+    display: block;
+    text-align: right;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.order-list1 li {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+    padding-left: 10px;
+    padding-right: 8px;
+    width: 170px;
+    height: 46px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-list1 li img {
+    margin-right: 10px;
+    width: 18px;
+    height: 33px
+}
+
+.order-list1 li .count-box1 {
+    max-height: 30px;
+    max-width: 30px;
+    /* float: right; */
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+}
